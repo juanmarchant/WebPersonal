@@ -1,0 +1,42 @@
+{% extends 'core/base.html' %}
+{% block title %}Home{% endblock title %}
+{%block content %} 
+{% load static %}
+
+<div class="container d-flex min-vh-100 justify-content-center align-items-center ">
+  
+  <div class="row d-flex align-items-center row-cols-lg-2 row-cols-md-2 row-cols-sm-1 row-cols-1">
+
+    <div class="col text-center pb-3">
+      <img class="img-fluid me" src="{% static 'core/img/me.png' %}" alt="Ilustracion de Juan Marchant" />
+    </div>
+
+    <div class="col">
+      {% include 'core/navbar.html' %}
+      <header>
+        <h1 class="text-lightblue">Hello I'm Juan Marchant</h1>
+        <h2 class="text-mediumblue fw-500 pb-1 ">Full Stack Web Developer</h2>
+        <p class="text-lightblue">
+          I'm a chilean based, apassionate about web development and excited for knowing more about it.
+          I use daily: <code>.py</code>, <code>.js</code>, <code>.html</code> & <code>.css</code>
+        </p>
+
+        <p class="text-mediumblue ">
+          At the moment I'm engaged to do more courses of diferent frameworks, programming language & trying to get a job 
+          for more experience in the world of web developers.
+          <br>
+          This is my first online portolio. Fell free to explore & tell me what you think about it!
+        </p>
+
+        <div class="py-3 ">
+          <a class="me-2" target="_blank" href="https://github.com/juanmarchant"><img src="{% static 'core/img/Github.png'%}" alt="Github"></a>
+          <a class="mx-2" target="_blank" href="https://www.instagram.com/juanmarchant__/"><img src="{% static 'core/img/Instagram.png'%}" alt="Instagram"></a>
+          <a class="mx-2" target="_blank" href="https://twitter.com/JuanMarchant_"><img src="{% static 'core/img/Twitter.png'%}" alt="Twitter"></a>
+        </div>
+      </header>
+
+    </div>
+  </div>
+</div>
+
+{% endblock content %}
