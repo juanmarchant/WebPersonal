@@ -1,0 +1,41 @@
+{% extends 'core/base.html' %} 
+{% block title %}Portfolio{% endblock title %}
+{%block content %} 
+{% load static %}
+
+<div class="container-fluid p-5">
+  {% include 'core/navbar.html' %}
+  <div class="row row-cols-lg-4 row-cols-md-2 row-cols-sm-1 row-cols-1 g-5">
+  {% for project in projects %}
+    <div class="col">
+      <div class="card h-100 bg-bluee border-15r shadow-me ">
+        <img class="card-img-top border-top-15r" src="{{project.image.url}}" alt="{{project.title}}" />
+        <div class="card-body">
+          <h5 class="card-title text-mediumblue">{{project.title}}</h5>
+          <p class="card-text text-lightblue">
+            {{project.description}}
+          </p>
+
+          <p class="text-lightblue">Language or Frameworks: 
+          {% for language in project.language %}
+            <code>{{language}}</code>
+          {% endfor %}
+          </p>
+          <p class="text-lightblue">Programs for code or desing: 
+          {% for program in project.program %}
+            <code>{{program}}</code>
+          {% endfor %}
+          </p>
+          {% if project.url_link != NULL %}
+            <a href="{{project.url_link}}" class="text-mediumblue text-decoration-none">Check Website ←</a>
+          {% else %}
+            <a href="#" class="btn-link disable text-mediumblue text-decoration-line-through">Check Website ←</a>
+            <small class="text-white">(soon)</small>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+  </div>
+</div>
+{% endblock content %}

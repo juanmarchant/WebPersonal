@@ -11,7 +11,7 @@ body {
 }
 
 .text-lightblue {
-  color: #c7f6ffe1 !important;
+  color: #C7F6FF !important;
 }
 
 .text-mediumblue {
@@ -24,6 +24,34 @@ body {
 
 a:hover {
   color: #00b4d8 !important;
+}
+
+.bg-bluee{
+  backdrop-filter: blur(40px) !important;
+  background: linear-gradient(178.88deg, rgba(0, 0, 0, 0.4) -8.62%, rgba(0, 0, 0, 0.4) 125.23%) !important;
+}
+
+
+.border-15r{
+  border-radius: 15px !important;
+}
+
+.border-top-15r{
+  border-radius: 15px 15px 0px 0px !important;
+}
+
+.shadow-me{
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2) !important;
+}
+
+.card{
+  outline: 2px solid  #20215C;
+  border: none;
+}
+
+input, textarea{
+  box-shadow: none !important;
+  outline: none !important;
 }
 
 code {
@@ -50,3 +78,4 @@ code {
     height: 200px !important;
   }
 }
+
