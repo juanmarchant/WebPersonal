@@ -13,8 +13,8 @@
                 <p class="text-mediumblue">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                 Voluptas cum rerum ut fugit impedit?. Laboriosam doloremque veritatis expedita porro.
             </div>
-            <form>
-                <div class="mb-3">
+            <form method='post'>{% csrf_token %}
+                {% comment %} <div class="mb-3">
                     <label class="form-label">Name</label>
                     <input type="text" placeholder="Enter a name" class="form-control">
                     
@@ -28,12 +28,14 @@
                 <div class="mb-4">
                     <label class="form-label">Message</label>
                     <textarea class="form-control" placeholder="Enter a message" name="" id="" cols="30" rows="5"></textarea>
-                </div>
-
+                </div> {% endcomment %}
+                {{form}}
                 <div class="d-flex justify-content-center ">
                     <button type="submit" class="btn btn-primary">Enviar</button>
                 </div>
             </form>
+
+            {% comment %} {{form}} {% endcomment %}
         </div>
     </div>
 </div>
