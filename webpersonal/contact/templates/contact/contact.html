@@ -4,38 +4,24 @@
 {% load static %}
 
 <div class="container d-flex min-vh-100 justify-content-center items-align-center">
-    
     <div class="row align-items-center p-3">        
-        <div class="col-lg-5 col-md-7 col bg-bluee text-lightblue border-15r shadow-me p-4 mx-auto">
+        <div class="col-lg-5 col-md-8 col bg-bluee border-15r shadow-me p-4 mx-auto">    
+            {% if 'ok' in request.GET %}
+                <p style="background-color: #90E0EF; color:#0077B6; padding: 8px; border:3px solid #0077B6; border-radius: 5px; text-align:center;font-weight:500;">
+                    Your email is already sent! Thank you for contacting me, I will respond as quickly as possible.
+                </p>
+            {% endif %}
             <div class="text-center ">
                 {% include 'core/navbar.html' %}
-                <h1>Contact</h1>
-                <p class="text-mediumblue">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Voluptas cum rerum ut fugit impedit?. Laboriosam doloremque veritatis expedita porro.
+                <h1 class="text-lightblue">Contact</h1>
+                <p class="text-mediumblue">If you have any questions about the source code of my projects or want to talk about anything else, please do so! I will respond as quickly as possible
             </div>
             <form method='post'>{% csrf_token %}
-                {% comment %} <div class="mb-3">
-                    <label class="form-label">Name</label>
-                    <input type="text" placeholder="Enter a name" class="form-control">
-                    
-                </div>
-
-                <div class="mb-3">
-                    <label class="form-label">E-mail</label>
-                    <input type="email" placeholder="Enter your email" class="form-control">
-                </div>
-                
-                <div class="mb-4">
-                    <label class="form-label">Message</label>
-                    <textarea class="form-control" placeholder="Enter a message" name="" id="" cols="30" rows="5"></textarea>
-                </div> {% endcomment %}
-                {{form}}
+                {{form.as_p}}
                 <div class="d-flex justify-content-center ">
                     <button type="submit" class="btn btn-primary">Enviar</button>
                 </div>
             </form>
-
-            {% comment %} {{form}} {% endcomment %}
         </div>
     </div>
 </div>

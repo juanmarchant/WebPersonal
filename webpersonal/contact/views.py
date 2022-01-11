@@ -25,6 +25,6 @@ class ContactPageView(FormView):
         name = form.cleaned_data.get('name')
         email = form.cleaned_data.get('email')
         message = form.cleaned_data.get('message')
-        send_mail(name,message,email,['juanmarchantdev@gmail.com', 'anotalo.supp@gmail.com'],fail_silently=False)
+        send_mail(name,message,email,['juanmarchantdev@gmail.com'],fail_silently=False)
         return super().form_valid(form)
 

@@ -6,22 +6,6 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-.fw-500 {
-  font-weight: 500;
-}
-
-.text-lightblue {
-  color: #C7F6FF !important;
-}
-
-.text-mediumblue {
-  color: #00add8 !important;
-}
-
-.text-lessblue {
-  color: #90e0ef !important;
-}
-
 a:hover {
   color: #00b4d8 !important;
 }
@@ -30,7 +14,6 @@ a:hover {
   backdrop-filter: blur(40px) !important;
   background: linear-gradient(178.88deg, rgba(0, 0, 0, 0.4) -8.62%, rgba(0, 0, 0, 0.4) 125.23%) !important;
 }
-
 
 .border-15r{
   border-radius: 15px !important;
@@ -47,6 +30,22 @@ a:hover {
 .card{
   outline: 2px solid  #20215C;
   border: none;
+}
+
+.fw-500 {
+  font-weight: 500;
+}
+
+.text-lightblue {
+  color: #C7F6FF !important;
+}
+
+.text-mediumblue {
+  color: #00add8 !important;
+}
+
+.text-lessblue {
+  color: #90e0ef !important;
 }
 
 input, textarea{
