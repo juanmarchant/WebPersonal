@@ -1,1 +1,1 @@
-web: gunicorn webpersonal.wsgi
+web: gunicorn webpersonal/webpersonal.wsgi
