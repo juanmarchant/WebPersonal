@@ -13,11 +13,11 @@ class ContactPageView(FormView):
         form = super(ContactPageView, self).get_form()
         # Inputs
         form.fields['name'].widget = forms.TextInput(
-            attrs={'class': 'form-control mb-3 mt-2', 'placeholder': 'Enter your name'})
+            attrs={'class': 'form-control mb-2 mt-2', 'placeholder': 'Enter your name'})
         form.fields['email'].widget = forms.EmailInput(
-            attrs={'class': 'form-control mb-3 mt-2', 'placeholder':'Enter your email'})
+            attrs={'class': 'form-control mb-2 mt-2', 'placeholder':'Enter your email'})
         form.fields['message'].widget = forms.Textarea(
-            attrs={'class': 'form-control mb-3 mt-2', 'cols':'30', 'rows':'5', 'placeholder':'Your message here...'})
+            attrs={'class': 'form-control mb-4 mt-2', 'cols':'30', 'rows':'5', 'placeholder':'Your message here...'})
         return form
 
 

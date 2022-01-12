@@ -2,7 +2,7 @@
 {% block title %}Contact{% endblock title %}
 {% block content %}
 {% load static %}
-
+<style>label{color:#C7F6FF;}</style>
 <div class="container d-flex min-vh-100 justify-content-center items-align-center">
     <div class="row align-items-center p-3">        
         <div class="col-lg-5 col-md-8 col bg-bluee border-15r shadow-me p-4 mx-auto">    
@@ -16,10 +16,10 @@
                 <h1 class="text-lightblue">Contact</h1>
                 <p class="text-mediumblue">If you have any questions about the source code of my projects or want to talk about anything else, please do so! I will respond as quickly as possible
             </div>
-            <form method='post'>{% csrf_token %}
+            <form  method='post'>{% csrf_token %}
                 {{form.as_p}}
-                <div class="d-flex justify-content-center ">
-                    <button type="submit" class="btn btn-primary">Enviar</button>
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-primary">Send</button>
                 </div>
             </form>
         </div>
