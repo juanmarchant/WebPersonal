@@ -6,6 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title> {% block title %}{% endblock title %} - Juan Marchant | Developer</title>
     {% load static %}
+    <meta name="description" content="{% block description_main%}{% endblock description_main%}">
+    <meta name="keywords">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="http://juanmarchant.com/{% block canonical%}{% endblock canonical %}" />
+    <!-- Meta tags Facebook-->
+    <meta property="og:url" content="https://www.juanmarchant.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content=" {% block title_og %}{% endblock title_og %} - Juan Marchant | Developer">
+    <meta property="og:description" content="{% block description_og%}{% endblock description_og%}">
+    <meta property="og:image" content="{% static 'img/me.png'%}">
+    <!-- Meta tags Twitter-->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="juanmarchant.com">
+    <meta property="twitter:url" content="https://www.juanmarchant.com/">
+    <meta name="twitter:title" content=" {% block title_tw %}{% endblock title_tw %} - Juan Marchant | Developer">
+    <meta name="twitter:description" content="{% block description_tw%}{% endblock description_tw%}">
+    <meta name="twitter:image" content="{% static 'img/me.png'%}">
+
     <link rel="apple-touch-icon" sizes="57x57" href="{% static 'core/img/favicon/apple-icon-57x57.png'%}">
     <link rel="apple-touch-icon" sizes="60x60" href="{% static 'core/img/favicon/apple-icon-60x60.png'%}">
     <link rel="apple-touch-icon" sizes="72x72" href="{% static 'core/img/favicon/apple-icon-72x72.png'%}">
